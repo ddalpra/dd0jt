@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:faces="jakarta.faces"
+	xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core"
+	xmlns:h="jakarta.faces.html" xmlns:pt="jakarta.faces.passthrough"
+	xmlns:cc="jakarta.faces.composite" xmlns:my="jakarta.faces.component"
+	xmlns:c="jakarta.tags.core" xmlns:fn="jakarta.tags.functions"
+				xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/template/layout.xhtml">
+
+	<ui:param name="title" value="Task List" />
+
+	<ui:define name="content">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Task</a></li>
+			<li><a href="#">Tasklist</a></li>
+		</ul>
+
+
+		<h:form>
+			<div class="formpanel">
+				<p:dataTable var="taskTable" value="#{taskBean.allTasks}">
+					<p:column headerText="Id">
+						<h:outputText value="#{taskTable.id}" />
+					</p:column>
+
+					<p:column headerText="Title">
+						<h:outputText value="#{taskTable.title}" />
+					</p:column>
+
+				</p:dataTable>
+			</div>
+		</h:form>
+
+	</ui:define>
+
+
+</ui:composition>
