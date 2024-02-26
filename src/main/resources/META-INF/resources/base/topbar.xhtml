@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:f="jakarta.faces.core"
+                xmlns:h="jakarta.faces.html"
+                xmlns:p="http://primefaces.org/ui">
+
+    <div class="layout-topbar">
+        <a class="menu-button" tabindex="0">
+            <i class="pi pi-bars"></i>
+        </a>
+        <h:link styleClass="logo" outcome="/index">
+            <p:graphicImage name="images/primefaces-logo.svg"/>
+        </h:link>
+
+        <h:form styleClass="topbar-form">
+            <ul class="topbar-menu">
+                <li>
+                    <h:link outcome="/index">Get Started</h:link>
+                </li>
+                
+            </ul>
+        </h:form>
+    </div>
+</ui:composition>
